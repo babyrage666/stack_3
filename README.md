@@ -1,47 +1,19 @@
 [![Build Status](https://travis-ci.org/babyrage666/stack_3.svg?branch=master)](https://travis-ci.org/babyrage666/stack_3)
-# Stack_2
+## Stack 3
 
-## TODO:
+## Tasks
+- [X] 1. Для шаблонного класса stack реализовать:
+	- конструктор с параметром (размер выделяемого массива)
+	- конструктор копирования
+	- конструктор перемещения
+	- оператор присваивания с семантикой копирования
+	- оператор присваивания с семантикой перемещения
 
-- [X] 1. Необходимо добавить метод empty для класа stack.
-- [X] 2. Необходимо добавить примеры для всех методов.
-- [X] 3. Необходимо добавить конфигурационный файл CMakeLists.txt
-- [X] 4. Обеспечить сборку с примерами и сборку без примеров
+- [X] 2. Сделать класс stack безопасным относительно исключений (обеспечивающим строгую гарантию), заменив метод `pop` на два соответствующих pop и top.
 
+- [X] 3. Пометить все методы одной из трех меток:
+	- /*basic*/
+	- /*strong*/
+	- /*noexcept*/
 
-## Структура репозитория:
-
-```bash
-$ tree repo
-examples/
-- init.cpp
-- push.cpp
-- pop.cpp
-- empty.cpp
-include/
-- stack.hpp
-sources/
-- main.cpp
-CMakeLists.txt
-README.md
-```
-
-Скрипты для п.4 (1)
-```bash
-# сборка без примеров
-$ cd repo
-$ cmake -H. -B_builds
-$ cmake _builds
-```
-
-Скрипты для п.4 (2)
-```bash
-# сборка с примерами
-$ cd repo
-$ cmake -H. -B_builds -DBUILD_EXAMPLES=ON
-$ cmake _builds
-$ ls _builds/init  # [✔]
-$ ls _builds/pop   # [✔] 
-$ ls _builds/push  # [✔]
-$ ls _builds/empty # [✔]
-```
+- [X] 4. Настроить интеграцию с сервисом Travis CI.
